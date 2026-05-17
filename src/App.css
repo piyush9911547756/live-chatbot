@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark *));
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+}
+
+.gradient-text {
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 1.2;
+  display: inline-block;
+  padding-bottom: 5px;
+
+  background: linear-gradient(270deg,
+      red,
+      orange,
+      yellow,
+      green,
+      cyan,
+      blue,
+      violet);
+
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.recent-title {
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.recent-title {
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(270deg, #d946ef, #ec4899, #f43f5e);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s ease infinite, floatText 3s ease-in-out infinite;
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes floatText {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
